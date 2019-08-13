@@ -133,10 +133,13 @@ function getSourceRef(fromLayer) {
 }
 
 function getDestinationRef(toLayer) {
+    var destinationRef = new ActionReference();  
+    destinationRef.putIndex(charIDToTypeID("Lyr "), getLayerIndex() - 1);  
+    return destinationRef;
+}
+
+function getLayerIndex() {
     var indexRef = new ActionReference();
     indexRef.putName(charIDToTypeID("Lyr "), toLayer.name);  
-    var layerIndex = executeActionGet(indexRef).getInteger(stringIDToTypeID('itemIndex'));  
-    var destinationRef = new ActionReference();  
-    destinationRef.putIndex(charIDToTypeID("Lyr "), layerIndex-1);  
-    return destinationRef;
+    return executeActionGet(indexRef).getInteger(stringIDToTypeID('itemIndex'));  
 }
