@@ -16,7 +16,7 @@ This is a very small script that I wrote for CYLC in 2019. The format of the cam
 
 ## Usage
 
-1. Make a new file that is 5x7 inches, portrait orientation, and 300 ppi
+1. Make a new file that is 8.5x11 inches, portrait orientation, and 300 ppi
 2. Make whatever you want on that document!
 3. Go to `File > Scripts > Campbook`
 4. After clicking on `Campbook`, the program should run, and when finished, it will display `Campbook Page Processing: Success!`
